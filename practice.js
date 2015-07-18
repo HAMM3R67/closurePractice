@@ -72,6 +72,39 @@ callFriend()(pNumber);
   After the function has been called N number of times, console.log('STAHHP');
 */
 
+var paramFn = function(){
+  return 34 + 33;
+}
+
+paramFn();
+
+var myFn = function(fn){
+  var fbNum = fn();
+  return function(){
+    console.log('My football number was ' + fbNum);
+  }
+}
+
+myFn(paramFn)();
+
+//below I am adding a second argument to invoke N number of times
+var paramFn = function(){
+  return 34 + 33;
+}
+
+var invoke = 15;
+
+var myFn = function(fn, inv){
+  var fbNum = fn();
+  for(var i = 0; i < inv; i++){
+    console.log ('STAHHP');
+  }
+  return function(){
+    console.log('My football number was ' + fbNum);
+  }
+}
+
+myFn(paramFn, invoke)();
 
 
 
