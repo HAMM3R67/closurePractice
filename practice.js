@@ -32,8 +32,10 @@ var callFriend = function(){
 //Above you're given a callFriend function that returns another function.
 //Do what you need to do in order to call your function and get 'Calling Jake at 435-215-9248' in your console.
 
-  //Code Here
-
+  callFriend()('435-215-9248');
+//OR
+var pNumber = '435-215-9248'
+callFriend()(pNumber);
 
 
 //Next Problem
