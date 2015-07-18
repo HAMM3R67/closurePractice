@@ -46,7 +46,13 @@ callFriend()(pNumber);
   Write a function called makeCounter that makes the following code work properly.
 */
 
-  //Code Here
+  var makeCounter = function(){
+    var counter = 0;
+    return function(){
+      return counter += 1;
+    }    
+  }
+  
   var count = makeCounter();
   count() // 1
   count() // 2
